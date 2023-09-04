@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그인 폼</title>
+</head>
+<body>
+    <h2>로그인 폼</h2>
+    <hr>
+    <form action="go" method="get">
+        <label for="username">사용자 ID:</label>
+        <input type="text" size="15" value=""><br>
+
+        <label for="password">비밀 번호:</label>
+        <input type="password" size="15" value=""><br>
+
+        <br>
+
+        <label for="detail">자소서:</label>
+        <textarea name="" id="" cols="20" rows="5">이 곳에 자기소개서 작성</textarea>
+
+        <br>
+        <br>
+
+        <input type="submit" value="완료">
+    </form>
+
+
+    <br>
+    <form>
+        나라 : <input type="text" list="countries"><br>
+                    <datalist id="countries">
+                        <option value="가나">
+                        <option value="스위스">
+                        <option value="브라질">
+                    </datalist>
+        보고싶은것 : <input type="text" list="what"><br>
+                    <datalist id="what">
+                        <option value="산">
+                        <option value="바다">
+                        <option value="도시">
+                    </datalist>
+        </form>
+</body>
+</html>
