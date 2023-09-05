@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        .wrap {display: flex; flex-wrap: wrap; justify-content: center;}
+        .box {width: 200px; height: 200px; background: lightblue;}
+
+        .absolute-box {position: absolute; top: 50%; bottom: 50%; background: lightcoral;}
+        .relative-box {background: lightsalmon;}
+        .relative-box:hover {position: absolute; bottom: 0; right: 0; }
+        .fixed-box {position: fixed; top: 0; right: 0; background: lightpink;}
+        
+    </style>
+    <body>
+        <div class="wrap">
+            <div class="box">box</div>
+            <div class="box fixed-box">fixed-box</div>
+            <div class="box relative-box">relative-box</div>
+            <div class="box absolute-box">absolute-box</div>
+        </div>
+    </body>
+</html>
