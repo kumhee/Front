@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt Dialog</title>
+</head>
+<body>
+    <script>
+        var ret = prompt("이름을 입력하세요:", "홍길동");
+        if (ret == null) {
+            alert("종료하였습니다");
+        } else if (ret == "") {
+            alert("입력이 올바르지 않습니다.");
+        } else {
+            alert(ret + "님 안녕하세요");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<script>
+    function over(ob) {ob.src = "images/sub.jpg";}
+    
+    function out(ob) {ob.src = "images/main.jpg";}
+</script>
+<style>
+    img {
+        width: 400px; height: auto;
+    }
+</style>
+<body>
+    <div>
+        <h3>dddd</h3>
+        <hr>
+        <img src="images/main.jpg" alt="" 
+        onmouseover="over(this)"
+        onmouseout="out(this)"/>
+    </div>
+
+    <hr>
+
+    <a href="javascript:alert('클릭하셨어요?')">클릭해보세요</a>
+</body>
+</html>
