@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 스타일 동적 변경</title>
+</head>
+<style>
+    hr {width: 500px; float: left;}
+    .btn {display: flex; flex-direction: column;}
+    input {width: 100px; height: 30px; line-height: 30px; background: #e9e9e9;
+    border: 1px solid #999; border-radius: 10px; font-weight: 700;margin-bottom: 10px;} 
+    input:last-child {margin-bottom: 0;}
+</style>
+<script>
+    function changeStyle() {
+        var span = document.getElementById("mySpan");
+        span.style.color = "green";
+        span.style.fontSize = "30px";
+        span.style.display = "block";
+        span.style.width = "6em";
+        span.style.border = "3px dotted magenta";
+        span.style.margin = "20px";
+    }
+
+    function addItem() {
+        var ul = document.getElementById("itemList"); // 해당 <ul> 요소 선택
+        var newListItem = document.createElement("li"); // 새로운 <li> 요소 생성
+        newListItem.textContent = "Orange"; // 내용 설정
+        ul.appendChild(newListItem); // 새로 생성한 <li> 요소를 해당 <ul>에 추가
+    }
+
+    function removeItem() {
+        var ul = document.getElementById("itemList"); // 해당 <ul> 요소 선택
+        var lastItem = ul.lastChild; // 마지막 <li> 요소 선택
+        if (lastItem) {
+            ul.removeChild(lastItem); // 마지막 <li> 요소 삭제
+        }
+    }
+</script>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <br>
+    <p style="color:blue">이것은 <span id="mySpan" style="color: red;">문장입니다</span></p>
+
+    <div>
+        <ul id="itemList">
+            <li>apple</li>
+            <li>banana</li>
+        </ul>
+    </div>
+
+    <div class="btn">
+        <input type="button" value="스타일 변경" onclick="changeStyle()">
+        <input type="button" value="아이템 추가" onclick="addItem()">
+        <input type="button" value="아이템 삭제" onclick="removeItem()">
+    </div>
+</body>
+</html>

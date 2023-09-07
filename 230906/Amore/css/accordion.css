@@ -1,0 +1,50 @@
+
+.a_top{width: 100%; height: 90px; background: #306095 ; text-align: center; 
+  display: flex; flex-wrap: wrap; justify-content: center ; align-items: center;}
+
+.search{display: inline-block; width: 200px; height: 28px; line-height: 30px; border: 0; border-bottom: 1px solid #fff; 
+  background: url('../images/a_search_btn.png') no-repeat 95% 50% }
+
+
+.accordion_wrap{width: 250px; height: 900px; background: #fff; 
+  position: absolute; top: 100px; left: -250px; z-index: 999999;}
+
+.accordion{width: 100%; margin-bottom: 130px;}
+
+.accordion_top{width: 100%; height: 100px; background: lightcoral;}
+
+.accordion h3{width: 100%; height: 50px; line-height: 50px; text-indent: 20px; font-weight: normal; 
+  border-bottom: 1px solid #eee; background: #fff; font-family: 'Cormorant Infant';}
+
+.accordion h3 a{display: block; font-size: 17px; font-weight: 500; color: #1d1d1d;}
+.accordion h3 a:hover{background:#306095; color: #fff;}
+
+.accordion div{width: 100%;}
+.accordion div ul li{width: 100%; height: 35px; line-height: 35px; text-indent: 45px;}
+
+.accordion div ul li a{display: block; font-size: 14px; font-weight: 200; color: #1d1d1d;}
+.accordion div ul li a:hover{background: rgba(0, 0, 0, 0.1);}
+
+.sidenav_language{width: 100%; margin-bottom: 20px;}
+.sidenav_language ul{display: flex; flex-wrap: wrap;}
+.sidenav_language ul li{text-indent: 18px; }
+.sidenav_language ul li a{display: block; font-size: 14px; font-weight: 500; font-family: 'Cormorant Infant';
+color: #1d1d1d;}
+.sidenav_language ul li a:hover{color: #000;text-decoration: underline;}
+
+.sidenav_sns{width: 100%;}
+.sidenav_sns ul {display: flex; flex-wrap: wrap;}
+.sidenav_sns ul li {padding: 0 5px; text-indent: 10px;}
+
+
+
+/*accordion_bg*/
+.accordion_bg{width: 100%; height: 900px; position: absolute; top: 100px; left: 0; z-index: 8888;
+  ;background: rgba(0, 0, 0, 0.5); display: none;}
+
+
+
+  @media screen and (max-width:480px) {
+    .accordion_wrap{top: 85px;}
+    .accordion_bg{top: 85px; }
+  }

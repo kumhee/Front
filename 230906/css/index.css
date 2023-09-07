@@ -33,16 +33,16 @@ body{font-family: 'Noto Sans KR', 돋움, sans-serif; background: #E9E9E9}
 .contents { width: 100%; display: flex; flex-wrap: wrap; align-items:flex-start;}
 
 .web { width: 639px; padding: 30px; border-right: 1px solid #999; }/* 700 */
-.web img {width: 400px; height: auto;}
+.web img {width: 380px; height: auto;}
 
-.contents_title{font-size:22px; margin-bottom:10px; }
+.contents_title{font-size:22px; margin-bottom:15px; }
 
 .web_img_title{font-size:18px; color:#333; margin-top:10px;}
 .web_img_article{font-size:12px; color:#666; margin-top:10px; margin-bottom: 10px;}
 
 
 .interview { width: 440px; padding: 30px; }/* 500 */
-.interview ul {margin-left:10px;}
+.interview ul {margin: 33px 0 0 10px;}
 .interview ul li {margin-bottom:20px;}
 .interview ul li a {font-size:12px; color:#333;}
 .interview ul li a:hover {color:#666;}

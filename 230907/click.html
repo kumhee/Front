@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 스타일 동적 변경</title>
+</head>
+<style>
+</style>
+
+<body>
+    <h2>Link Click Preventer</h2>
+
+    <a href="https://www.google.com/">구글</a>
+    <a href="https://www.naver.com/">네이버</a>
+
+    <script>
+        // a 태그 요소들을 가져옵니다.
+        var links = document.getElementsByTagName('a');
+
+        // 각 링크에 클릭 이벤트 리스너 추가
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function (event) {
+                // 사용자에게 확인 메시지 표시
+                var confirmation = window.confirm("해당 링크로 이동하시겠습니까?");
+                
+                // 사용자가 "취소"를 선택한 경우 링크 이동 방지
+                if (!confirmation) {
+                    event.preventDefault();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

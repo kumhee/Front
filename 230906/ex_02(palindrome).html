@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>팰리드롬</title>
+</head>
+<body>
+    <h1>팰리드롬</h1>
+    <hr>
+    <br>
+
+    <script>
+        var userInput = prompt("문자열을 입력하세요:");
+
+        var ret = true;
+
+        // 입력 문자열을 공백 제거하고 소문자로 변환
+        var input = userInput.replace(/ /g, "").toLowerCase();
+
+        for (var i = 0; i < input.length; i++) {
+            if(input[i] != input[input.length - i - 1]) {
+                ret = false;
+            }
+        }
+
+        if(ret) {
+            alert("팰린드롬이 맞습니다.")
+        } else {
+            alert("팰린드롬이 아닙니다.")
+        }
+    </script>
+</body>
+</html>

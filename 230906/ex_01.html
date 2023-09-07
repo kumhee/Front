@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문제1</title>
+</head>
+<style>
+    li {list-style: none;}
+</style>
+<body>
+    <button onclick="startPrinting()">문자 입력</button>
+
+    <div id="output"></div>
+
+    <script>
+        function startPrinting() {
+            var userInput = prompt("문자열을 입력하세요:");
+            
+            if (userInput !== null) {
+                var outputDiv = document.getElementById("output");
+                
+                for (var i = 0; i < userInput.length; i++) {
+                    var charSpan = document.createElement("li");
+                    charSpan.textContent = userInput[i];
+                    outputDiv.appendChild(charSpan);
+                }
+            } else {
+                alert("입력이 취소되었습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

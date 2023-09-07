@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문자열 압축하기</title>
+</head>
+<body>
+    <h1>문자열 압축하기</h1>
+    <hr>
+    <br>
+    <button onclick="complete()">실행btn</button>
+
+    <div id="output"></div>
+
+    <script>
+        function complete() {
+            var userInput = prompt("문자열을 입력하세요:");
+            var result = "";
+            var input = userInput[0];
+            var count = 1;
+
+            for (var i = 1; i < userInput.length; i++) {
+                if (userInput[i] == input) {
+                    count++;
+                } else {
+                    result += input + count;
+                    input = userInput[i];
+                    count = 1;
+                }
+            }
+
+            result += input + count;
+
+            var output = document.getElementById("output");
+            output.textContent = "압축된 문자열: " + result;
+        }
+    </script>
+</body>
+</html>

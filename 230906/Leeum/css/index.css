@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0 ; padding:0 ; vertical-align:top; }
+li{list-style:none;}
+a{text-decoration:none; color:#000;}
+img{border:0;}
+body{font-family: 'Noto Sans KR', 돋움, sans-serif; max-width:1920px; min-width:320px; margin:0 auto; }
+
+/*공통서식*/
+.contents_title_box {width: 100%; margin-bottom: 70px; position: relative;}
+.contents_title {font-size: 30px; font-weight: bold; letter-spacing: -1.5px; color: #000;}
+.contents_article {font-size: 18px; font-weight: lighter; letter-spacing: -1px; color: #8f8f8f;}
+.contents_title_box a {width: 60px; font-size: 12px; color: #8f8f8f; font-weight: lighter; background: url("../images/right_arw.png") no-repeat 100% 50%;
+  position: absolute; bottom: 0; right: 0; }
+.contents_title_box a:hover {color: #8f8f8f;}
+
+/*header*/
+header{width:100%; background: #000; position: fixed; top: 0; left: 0; z-index: 99999;}
+.header_wrap{width: 1400px; height:100px; position: relative; margin: 0 auto;}
+
+.logo{ position:absolute; top:37px; left:0; }
+
+#menu{position:absolute; top:0; left:440px;}
+#menu ul {display:flex; flex-wrap:wrap;}
+#menu ul li {height:100px; line-height:100px;}
+#menu ul li a{display: block; ; font-size: 16px; padding:0 20px; color:#FFF; font-weight:700;}
+#menu ul li a:hover{color:#b6b6b6;}
+
+.right_gnb {position:absolute; top:37px; right: 0; }
+.right_gnb ul {display: flex; flex-wrap: wrap;}
+.right_gnb ul li a {display: block; padding: 0 5px; ;}
+
+/*main_img*/
+#section0 {background: url("../images/main.jpg") no-repeat 50% 50%;}
+.m_btm_box{width: 100%; height: 75px; display: flex; flex-wrap: wrap; background: #fff;
+position: absolute; bottom: 0; left: 0;}
+.time_box{width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; line-height: 75px; background: url("../images/time.png") no-repeat 0 50%}
+.time{font-size: 18px; font-weight: lighter; color: #000;}
+.time:first-child{padding: 0 30px;}
+
+.request_box{width: 400px; background:url("../images/main_arw_btn.png") no-repeat 90% 55% #333;}
+.request{line-height: 75px; font-size: 18px;  padding-left: 36px;}
+.request a {color: #FFF;}
+.request a:hover{display: block ; color: #b6b6b6;}
+
+/*show*/
+#section1 {background: url("../images/show_bg.jpg") no-repeat 50% 50%;}
+.show{width: 100%; }
+
+.show_contents{width: 1400px; margin: 0 auto;}
+.show_contents_title_box{width: 100%; margin-bottom: 75px; position: relative;}
+.show_contents_title{font-size: 34px; font-weight: bold; color: #fff;}
+.show_contents_article{font-size: 18px; font-weight: lighter; color: #fff;}
+.show_contents_title_box a {width: 50px; font-size: 12px; color: #fff; font-weight: lighter; background: url("../images/right_arw.png") no-repeat 100% 50%;
+  position: absolute; bottom: 0; right: 0;}
+  .show_contents_title_box a:hover {color: #666;}
+
+.show_pics_wrap{width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.s_c_textbox{padding-top: 124px;}
+.s_title{font-size: 22px; font-weight: 400; color: #fff; margin-bottom: 20px;}
+.s_article{font-size: 14px; font-weight: lighter; color: #fff; margin-bottom: 95px;}
+.s_date{font-size: 14px; font-weight: lighter; color: #fff;}
+
+/*keep*/
+#section2 {background: url("../images/keep_bg.jpg") no-repeat 50% 50%;}
+.keep{width: 100%; }
+.keep_1400{width: 1400px; margin: 77px auto 0 auto; }
+
+.keep_contents{width: 100%; }
+.keep_pics_wrap{width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.keep_pics_wrap:first-child{margin-bottom: 40px;}
+
+.keep_text_box{padding-top: 65px;}
+.keep_text_box:last-child{padding-top: 40px;}
+.keep_pics_cat {font-size: 14px; font-weight: bold; color: #000;}
+.keep_pics_title {font-size: 22px; font-weight: bold; letter-spacing: -1px; color: #000; margin-bottom: 30px;}
+.keep_pics_article {font-size: 14px; font-weight: lighter; letter-spacing: -0.5px; color: #8f8f8f;}
+
+/*author*/
+#section3 {width: 100%;}
+.author_1400{width: 1400px; margin: 0 auto;}
+
+.author_contents{width: 100%; display: flex; flex-wrap: wrap;}
+.author_pics_wrap{width:326px; margin-right: 32px;}
+.author_pics_wrap:last-child{margin-right: 0;}
+
+.author_pics{width: 326px;}
+
+.author_name{font-size: 22px; font-weight: bold; letter-spacing: -1px; color: #000; margin-top: 12px;}
+
+/*program*/
+#section4 {width: 100%;}
+.program_1400 {width: 1400px; margin: 0 auto; }
+
+.program_contents{width: 100%; display: flex; flex-wrap: wrap;}
+.program_pics_wrap{margin-right: 32px;}
+.program_pics_wrap:last-child{margin-right: 0;}
+
+.program_pics{margin-bottom: 13px;}
+.program_pics_title{font-size: 22px; font-weight: bold; letter-spacing: -1px; color: #000; margin-bottom: 14px;}
+.program_pics_article{font-size: 14px; font-weight: lighter; color: #8f8f8f;}
+
+/*space*/
+.space{width: 100%;}
+.space_1400{width: 1400px; height: 400px; margin: 0 auto;  border-top: 1px solid #000;
+  display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center;}/**가운데 설정**/
+
+.space .contents_title_box{ width: 380px; margin-bottom:0;}
+.space_contents{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
+
+/*footer*/
+footer{width: 100%; height: 330px; background: #000;
+display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; }
+.footer_1400{width: 1400px; height: 230px; margin: 0 auto; 
+  display: flex; flex-wrap: wrap; justify-content: space-between; position: relative;}
+
+.footer_left {display: flex; flex-wrap: wrap; flex-direction: column; justify-content: space-between;}
+.footer_left ul p {font-size: 14px; font-weight: lighter; color: #acacac; padding: 3px 0;}
+.footer_left ul address {font-size: 14px; font-weight: lighter; color: #acacac; }
+.footer_left ul a {font-size: 14px; font-weight: lighter; color: #acacac; padding: 3px 0;}
+.footer_left ul li a {font-size: 14px; font-weight: bold; color: #fff;}
+
+.footer_left ul li {font-size: 14px; font-weight: lighter; color: #acacac; padding: 3px 0;}
+
+.footer_right{display: flex; flex-wrap: wrap;}
+.footer_right ul {margin-right: 60px;}
+.footer_right ul:last-child {margin-right: 0;}
+.footer_right ul li {font-size: 14px; font-weight: lighter; color: #acacac; padding: 3px 0;}
+.footer_right ul li:nth-child(4) {margin-bottom: 50px;}
+
+.copyright{font-size: 14px; font-weight: lighter; color: #acacac; 
+  position: absolute; bottom: 50px; right: 43px;}
+
+
+
+.fp-watermark {display: none;}
+
+
+
+
+
+
+

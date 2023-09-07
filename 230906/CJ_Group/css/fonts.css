@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'gmarket-b';
+  src: url(../fonts/gmarket-b.otf) format('otf'),
+      url(../fonts/gmarket-b.woff) format('woff'),
+      url(../fonts/gmarket-b.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'cj-l';
+  src: url(../fonts/cj-l.otf) format('otf'),
+      url(../fonts/cj-l.woff) format('woff'),
+      url(../fonts/cj-l.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'cj-r';
+  src: url(../fonts/cj-r.otf) format('otf'),
+      url(../fonts/cj-r.woff) format('woff'),
+      url(../fonts/cj-r.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'cj-m';
+  src: url(../fonts/cj-m.otf) format('otf'),
+      url(../fonts/cj-m.woff) format('woff'),
+      url(../fonts/cj-m.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'cj-b';
+  src: url(../fonts/cj-b.otf) format('otf'),
+      url(../fonts/cj-b.woff) format('woff'),
+      url(../fonts/cj-b.ttf) format('ttf');
+}
