@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>마우스 드래깅으로 캔버스에 그림 그리기</title>
+</head>
+<style>
+    button { width: 100px; height: 35px; line-height: 35px; text-align: center; background: #e9e9e9; font-weight: bold;
+    border:  1px solid #999; border-radius: 20px;}
+</style>
+<script>
+    var canvas, context;
+
+    function init() {
+        canvas = document.getElementById("myCanvas");
+        context = canvas.getContext("2d"); // "2d"를 문자열로 지정
+
+        context.lineWidth = 2; // 선 굵기 2
+        context.strokeStyle = "black";
+
+        canvas.addEventListener("mousemove", function(e) { move(e); }, false);
+        canvas.addEventListener("mousedown", function(e) { down(e); }, false);
+        canvas.addEventListener("mouseup", function(e) { up(e); }, false); 
+        canvas.addEventListener("mouseout", function(e) { out(e); }, false); 
+    }
+
+    var startX = 0, startY = 0; // 드레깅 동안, 처음 마우스가 눌러진 좌표
+    var dragging = false;
+
+    function draw(curX, curY) {
+        context.beginPath();
+        context.moveTo(startX, startY);
+        context.lineTo(curX, curY);
+        context.stroke();
+
+        startX = curX;
+        startY = curY;
+    }
+
+    function down(e) {
+        dragging = true;
+        startX = e.offsetX;
+        startY = e.offsetY;
+    }
+
+    function up(e) {
+        dragging = false;
+    }
+
+    function move(e) {
+        if (!dragging) return; // 마우스가 눌러지지 않았으면 리턴
+        var curX = e.offsetX;
+        var curY = e.offsetY;
+        draw(curX, curY);
+    }
+
+    function out(e) {
+        dragging = false;
+    }
+
+    function remove() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+</script>
+<body onload="init()">
+    <h3>마우스를 누른 채 드래깅하여 그림 그려 보세요</h3>
+    <hr>
+    <canvas id="myCanvas" style="background-color: rgb(229, 196, 240);" width="400" height="300"></canvas>
+    <br>
+    <br>
+    <button onclick="remove()">그림 삭제</button>
+</body>
+</html>

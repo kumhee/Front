@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    * {margin: 0; padding: 0;}
+    .text_container {display: inline-block; border: 1px solid; border-radius: 5px; padding: 5px; margin: 20px 0; font-weight: bold;}
+    .selected {background:#FAFFA6;}
+
+</style>
+<script>
+    function changeImg(imageUrl, textElement) {
+        var img = document.getElementById("myImg");
+        img.src = imageUrl;
+
+        var textCon = document.getElementsByClassName("text_container");
+        for (var i=0; i<textCon.length; i++) {
+            textCon[i].classList.remove("selected");
+        }
+
+        textElement.classList.add("selected");
+    
+        img.onload = function() {
+            var mySpan = document.getElementById("mySpan");
+            mySpan.innerHTML = img.width + "x" + img.height;
+        }
+    }
+
+    window.onload = function() {
+        var textCon = document.getElementById("appleText");
+        textCon.classList.add("selected");
+        changeImg("apple.png", textCon);
+    }
+</script>
+<body>
+    <div>
+        <div></div>
+            <h3>텍스트 이미지 변경</h3><br>
+            <hr>
+            <p class="text_container" id="appleText" onmouseover="changeImg('apple.png', this)">apple</p>
+            <p class="text_container" onmouseover="changeImg('banana.png', this)">banana</p>
+            <p class="text_container" onmouseover="changeImg('mango.png', this)">mango</p>
+        </div>
+
+        <img id="myImg" src="" alt="">
+        <p>이미지 크기 : <span id="mySpan"></span></p>
+    </div>
+</body>
+</html>

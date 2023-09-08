@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head><title>지도 만들기</title></head>
+    <style>
+        #map {width: 100%; height: 800px;}
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDHN9twAPwXBX2acPR38z697ueCIl3-uoA&callback=initMap&libraries=&v=weekly" async></script>
+
+    <script type="text/javascript">
+        function initMap() {
+            const curLoc = { lat: -25.344, lng: 131.036 }; 
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 5,
+                center: curLoc,
+            });
+            const marker = new google.maps.Marker({
+                position: curLoc,
+                map : map,
+            });
+        }
+    </script>
+    
+    <body>
+        <h3>My google Maps</h3>
+        <hr>
+        <div id="map"></div>
+    </body>
+</html>

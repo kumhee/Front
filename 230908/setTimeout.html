@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    var timerId = null;
+    function startTimer(time){
+      timerId = setTimeout("load('https://www.naver.com/')",time)
+      document.getElementById("img").title = "타이머동작시작..."
+    }
+    function cancelTimer(){
+      if(timerId != null){
+        clearTimeout(timerId);
+      }
+    }
+    function load(url){
+      window.location = url;
+    }
+
+  </script>
+</head>
+<body>
+  <h3>이미지에 마우스올리고 5초간있을때 사이트이동</h3>
+  <img src="https://imgnews.pstatic.net/image/014/2023/05/23/0005016536_001_20230523135004826.jpg?type=w647" onmouseover="startTimer(5000)" onmouseout="cancelTimer()">
+</body>
+</html>
